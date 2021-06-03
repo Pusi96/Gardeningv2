@@ -2,7 +2,6 @@
 <html  lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-
     <title>Flask App </title>
 
     <!-- Bootstraps Java Scipts Links -->
@@ -10,12 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-
     <!-- JQuery links  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
 
     <!--High CHART LIVE  -->
     <script src="http://code.highcharts.com/highcharts.js"></script>
@@ -24,27 +19,20 @@
 
     <!--Gauge  -->
     <script type="text/javascript" src="http://pubnub.github.io/eon/lib/eon.js"></script>
-
-
-</head>
-
+</head
 <body>
-
     <div class="jumbotron">
         <h1 class="text-center text-white">Üdv a növényfigyelő oldalamon! </h1>
     </div>
     <br>
     <br>
-
     <div class="container-fluid">
 
         <div class="row">
-
             <div class="col-5 jumbotron p-2 mx-1">
                 <p> {{fikusz_öntözve}} </p>
                 <h1 class="sensor1"> Fikusz : </h1>
                 <h2> Szárazság: {{adat1[-1][1]}}  %</h2>
-
                 <form action="/watering_fikusz" method="post">
                     <button name="water" type="submit">Adj vizet Fikusznak!</button>
                     <br>
@@ -61,7 +49,6 @@
                     <button name="water" type="submit">Adj vizet Verának!</button>
                     <br>
                 </form>
-
             </div>
             <br>
         </div>
@@ -74,13 +61,11 @@
             height: 190px;
             justify-content: center;
         }
-
         .row{
             justify-content: center;
             text-align: center;
             vertical-align: center;
         }
-
 
     </style>
 
@@ -105,7 +90,6 @@
             </div>
         </div>
     </div>
-
 
     <script>
         var chartTemperature;
@@ -181,12 +165,8 @@
                     data: {{adat2}}
                 }]
             });
-
-
         });
     </script>
-
-
 
 <script>
     class Image{
@@ -232,6 +212,4 @@
     obj.centerTitle();
     </script>
 </body>
-
-
 </html>

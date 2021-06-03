@@ -8,7 +8,6 @@ app = Flask(__name__)
 plant1 = []
 plant2 = []
 
-
 @app.route('/', methods=["GET", "POST"])
 def main():
     try:
@@ -62,18 +61,14 @@ def gather_data():
             print(e)
             continue
 
-
 def runApp():
     app.run(host="0.0.0.0", debug=True, use_reloader=False)
 
 if __name__ == '__main__':
     try:
-        #logger.info(f'start first thread')
         t1 = threading.Thread(target=runApp).start()
-        #logger.info(f'start second thread')
         t2 = threading.Thread(target=gather_data).start()
     except Exception as e:
-        #logger.error("Unexpected error:" + str(e))
         print(e)
 
 
