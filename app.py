@@ -60,12 +60,9 @@ def watering_fikusz():
     return render_template('index.html',adat1 = plant1[-100:], adat2 = plant2[-100:], vera_öntözve = vera_öntözve, fikusz_öntözve = fikusz_öntözve)
 
 def gather_data():
-    last_time = datetime.now()
-
     while True:
         try:
             moisture.get_moisture()
-
         except Exception as e:
             print(e)
             continue
