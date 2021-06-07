@@ -3,8 +3,8 @@ import csv
 import serial
 from time import time
 
-ser = serial.Serial('COM3', 9600, timeout = None) #for Windows port
-#ser = serial.Serial("/dev/ttyACM0",9600, timeout = None) #for Arduino port
+ser = serial.Serial('COM3', 9600, timeout = None) # for Windows port
+#ser = serial.Serial("/dev/ttyACM0",9600, timeout = None) # for Arduino port
 
 def get_moisture():
 

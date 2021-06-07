@@ -10,6 +10,9 @@ app = Flask(__name__)
 vera_öntözve = ""
 fikusz_öntözve = ""
 
+plant1 = []
+plant2 = []
+
 def load_data():
     plant1 = []
     plant2 = []
@@ -23,9 +26,6 @@ def load_data():
             plant2.append([float(time), int(sensor_value2)])
 
         return plant1, plant2
-
-plant1 = []
-plant2 = []
 
 @app.route('/', methods=["GET", "POST"])
 def main():
