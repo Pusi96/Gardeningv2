@@ -15,7 +15,7 @@ def get_moisture():
         except Exception as e:
                 print(e)
 
-        data_to_save = [datetime.now().strftime("%Y-%m-%d %H:%M:%S"), moisture1, moisture2]
+        data_to_save = [datetime.now().strftime("%Y-%m-%d %H:%M:%S"), time()*1000 + 7200*1000, moisture1, moisture2]
         data = [time()*1000 + 7200*1000, moisture1, moisture2]
 
         with open("sensor_data.csv", "a") as f:
